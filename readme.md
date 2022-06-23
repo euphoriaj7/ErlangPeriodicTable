@@ -1,2 +1,2 @@
 # useful sources
-[Erlang Tutorial](erlangbyexample.org/hello-world)
+[Erlang Tutorial](https://erlangbyexample.org/hello-world)
