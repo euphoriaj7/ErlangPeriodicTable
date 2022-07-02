@@ -139,7 +139,9 @@ make_periodic_table() ->
 % table = make_periodic_table()
 display_element_in_table()->
     Peri_table = make_periodic_table(),
-    Element = io:get_line("Please enter in your desired element from the periodic table "),
+    Element = io:get_line("Please enter in your desired element from the periodic table,
+(Make sure the first letter is Uppercase and if there is a second letter lowercase,
+if there is a second letter in the abbreviation): "),
     io:fwrite("~p~n", [maps:get(Element,Peri_table)]),
     io:format("The element you selected with its respective atomic mass is:~p~n",[maps:get(Element,Peri_table)]).
         % get("Ac",Peri_table)
