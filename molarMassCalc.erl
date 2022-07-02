@@ -5,6 +5,7 @@
 
 % from ast import parse
 
+% Create a method to print at will with given arguments
 write(String, Value) ->
     io:format("~p = ~p~n", [String, Value]).
 
@@ -13,130 +14,264 @@ make_periodic_table() ->
 %     # symobl: [name, atomic_mass]
 %     Peri_table = {
     Peri_table = # {
-        Ac=>{Actinium,227},
-        Ag=>{Actinium,227},  
-        Al=>{Aluminum, 26.9815386},
-        Am=>{Americium, 243},
-        Ar=>{Argon, 39.948},
-        As=>{Arsenic, 74.9216},
-        At=>{Astatine, 210},
-        Au=>{Gold, 196.966569},
-        B=>{Boron, 10.811},
-        Ba=>{Barium,	137.327},
-        Be=>{Beryllium, 9.012182},
-        Bh=>{Bohrium, 272},
-        Bi=>{Bismuth, 208.9804},
-        Bk=>{Berkelium, 247},
-        Br=>{Bromine, 79.904},
-        C=>{Carbon, 12.0107},
-        Ca=>{Calcium, 40.078},
-        Cd=>{Cadmium, 112.411},
-        Ce=>{Cerium,	140.116},
-        Cf=>{Californium, 251},
-        Cl=>{Chlorine, 35.453},
-        Cm=>{Curium,	247},
-        Cn=>{Copernicium, 285},
-        Co=>{Cobalt,	58.933195},
-        Cr=>{Chromium, 51.9961},
-        Cs=>{Cesium,	132.9054519},
-        Cu=>{Copper,	63.546},
-        Db=>{Dubnium, 268},
-        Ds=>{Darmstadtium, 281},
-        Dy=>{Dysprosium,	162.5},
-        Er=>{Erbium,	167.259},
-        Es=>{Einsteinium, 252},
-        Eu=>{Europium, 151.964},
-        F=>{Fluorine, 18.9984032},
-        Fe=>{Iron, 55.845},
-        Fl=>{Flerovium, 289},
-        Fm=>{Fermium, 257},
-        Fr=>{Francium, 223},
-        Ga=>{Gallium, 69.723},
-        Gd=>{Gadolinium,	157.25},
-        Ge=>{Germanium, 72.64},
-        H=>{Hydrogen, 1.00794},
-        He=>{Helium,	4.002602},
-        Hf=>{Hafnium, 178.49},
-        Hg=>{Mercury, 200.59},
-        Ho=>{Holmium, 164.93032},
-        Hs=>{Hassium, 270},
-        I=>{Iodine, 126.90447},
-        In=>{Indium,	114.818},
-        Ir=>{Iridium, 192.217},
-        K=>{Potassium, 39.0983},
-        Kr=>{Krypton, 83.798},
-        La=>{Lanthanum, 138.90547},
-        Li=>{Lithium, 6.941},
-        Lr=>{Lawrencium,	262},
-        Lu=>{Lutetium, 174.9668},
-        Lv=>{Livermorium, 293},
-        Mc=>{Moscovium, 288},
-        Md=>{Mendelevium, 258},
-        Mg=>{Magnesium, 24.305},
-        Mn=>{Manganese, 54.938045},
-        Mo=>{Molybdenum,	95.96},
-        Mt=>{Meitnerium,	276},
-        N=>{Nitrogen, 14.0067},
-        Na=>{Sodium,	22.98976928},
-        Nb=>{Niobium, 92.90638},
-        Nd=>{Neodymium, 144.242},
-        Ne=>{Neon, 20.1797},
-        Nh=>{Nihonium, 284},
-        Ni=>{Nickel,	58.6934},
-        No=>{Nobelium, 259},
-        Np=>{Neptunium, 237},
-        O=>{Oxygen, 15.9994},
-        Og=>{Oganesson, 294},
-        Os=>{Osmium,	190.23},
-        P=>{Phosphorus, 30.973762},
-        Pa=>{Protactinium, 231.03588},
-        Pb=>{Lead, 207.2},
-        Pd=>{Palladium, 106.42},
-        Pm=>{Promethium,	145},
-        Po=>{Polonium, 209},
-        Pr=>{Praseodymium, 140.90765},
-        Pt=>{Platinum, 195.084},
-        Pu=>{Plutonium, 244},
-        Ra=>{Radium,	226},
-        Rb=>{Rubidium, 85.4678},
-        Re=>{Rhenium, 186.207},
-        Rf=>{Rutherfordium, 267},
-        Rg=>{Roentgenium, 280},
-        Rh=>{Rhodium, 102.9055},
-        Rn=>{Radon, 222},
-        Ru=>{Ruthenium, 101.07},
-        S=>{Sulfur, 32.065},
-        Sb=>{Antimony, 121.76},
-        Sc=>{Scandium, 44.955912},
-        Se=>{Selenium, 78.96},
-        Sg=>{Seaborgium,	271},
-        Si=>{Silicon, 28.0855},
-        Sm=>{Samarium, 150.36},
-        Sn=>{Tin, 118.71},
-        Sr=>{Strontium, 87.62},
-        Ta=>{Tantalum, 180.94788},
-        Tb=>{Terbium, 158.92535},
-        Tc=>{Technetium,	98},
-        Te=>{Tellurium, 127.6},
-        Th=>{Thorium, 232.03806},
-        Ti=>{Titanium, 47.867},
-        Tl=>{Thallium, 204.3833},
-        Tm=>{Thulium, 168.93421},
-        Ts=>{Tennessine,	294},
-        U=>{Uranium,	238.02891},
-        V=>{Vanadium, 50.9415},
-        W=>{Tungsten, 183.84},
-        Xe=>{Xenon, 131.293},
-        Y=>{Yttrium, 88.90585},
-        Yb=>{Ytterbium, 173.054},
-        Zn=>{Zinc, 65.38},
-        Zr=>{Zirconium, 91.224}},
+        "Ac\n"=>{"Actinium",227},
+        "Ag\n"=>{"Actinium",227},  
+        "Al\n"=>{"Aluminum", 26.9815386},
+        "Am\n"=>{"Americium", 243},
+        "Ar\n"=>{"Argon", 39.948},
+        "As\n"=>{"Arsenic", 74.9216},
+        "At\n"=>{"Astatine", 210},
+        "Au\n"=>{"Gold", 196.966569},
+        "B\n"=>{"Boron", 10.811},
+        "Ba\n"=>{"Barium",	137.327},
+        "Be\n"=>{"Beryllium", 9.012182},
+        "Bh\n"=>{"Bohrium", 272},
+        "Bi\n"=>{"Bismuth", 208.9804},
+        "Bk\n"=>{"Berkelium", 247},
+        "Br\n"=>{"Bromine", 79.904},
+        "C\n"=>{"Carbon", 12.0107},
+        "Ca\n"=>{"Calcium", 40.078},
+        "Cd\n"=>{"Cadmium", 112.411},
+        "Ce\n"=>{"Cerium",	140.116},
+        "Cf\n"=>{"Californium", 251},
+        "Cl\n"=>{"Chlorine", 35.453},
+        "Cm\n"=>{"Curium",	247},
+        "Cn\n"=>{"Copernicium", 285},
+        "Co\n"=>{"Cobalt",	58.933195},
+        "Cr\n"=>{"Chromium", 51.9961},
+        "Cs\n"=>{"Cesium",	132.9054519},
+        "Cu\n"=>{"Copper",	63.546},
+        "Db\n"=>{"Dubnium", 268},
+        "Ds\n"=>{"Darmstadtium", 281},
+        "Dy\n"=>{"Dysprosium",	162.5},
+        "Er\n"=>{"Erbium",	167.259},
+        "Es\n"=>{"Einsteinium", 252},
+        "Eu\n"=>{"Europium", 151.964},
+        "F\n"=>{"Fluorine", 18.9984032},
+        "Fe\n"=>{"Iron", 55.845},
+        "Fl\n"=>{"Flerovium", 289},
+        "Fm\n"=>{"Fermium", 257},
+        "Fr\n"=>{"Francium", 223},
+        "Ga\n"=>{"Gallium", 69.723},
+        "Gd\n"=>{"Gadolinium",	157.25},
+        "Ge\n"=>{"Germanium", 72.64},
+        "H\n"=>{"Hydrogen", 1.00794},
+        "He\n"=>{"Helium",	4.002602},
+        "Hf\n"=>{"Hafnium", 178.49},
+        "Hg\n"=>{"Mercury", 200.59},
+        "Ho\n"=>{"Holmium", 164.93032},
+        "Hs\n"=>{"Hassium", 270},
+        "I\n"=>{"Iodine", 126.90447},
+        "In\n"=>{"Indium",	114.818},
+        "Ir\n"=>{"Iridium", 192.217},
+        "K\n"=>{"Potassium", 39.0983},
+        "Kr\n"=>{"Krypton", 83.798},
+        "La\n"=>{"Lanthanum", 138.90547},
+        "Li\n"=>{"Lithium", 6.941},
+        "Lr\n"=>{"Lawrencium",	262},
+        "Lu\n"=>{"Lutetium", 174.9668},
+        "Lv\n"=>{"Livermorium", 293},
+        "Mc\n"=>{"Moscovium", 288},
+        "Md\n"=>{"Mendelevium", 258},
+        "Mg\n"=>{"Magnesium", 24.305},
+        "Mn\n"=>{"Manganese", 54.938045},
+        "Mo\n"=>{"Molybdenum",	95.96},
+        "Mt\n"=>{"Meitnerium",	276},
+        "N\n"=>{"Nitrogen", 14.0067},
+        "Na\n"=>{"Sodium",	22.98976928},
+        "Nb\n"=>{"Niobium", 92.90638},
+        "Nd\n"=>{"Neodymium", 144.242},
+        "Ne\n"=>{"Neon", 20.1797},
+        "Nh\n"=>{"Nihonium", 284},
+        "Ni\n"=>{"Nickel",	58.6934},
+        "No\n"=>{"Nobelium", 259},
+        "Np\n"=>{"Neptunium", 237},
+        "O\n"=>{"Oxygen", 15.9994},
+        "Og\n"=>{"Oganesson", 294},
+        "Os\n"=>{"Osmium",	190.23},
+        "P\n"=>{"Phosphorus", 30.973762},
+        "Pa\n"=>{"Protactinium", 231.03588},
+        "Pb\n"=>{"Lead", 207.2},
+        "Pd\n"=>{"Palladium", 106.42},
+        "Pm\n"=>{"Promethium",	145},
+        "Po\n"=>{"Polonium", 209},
+        "Pr\n"=>{"Praseodymium", 140.90765},
+        "Pt\n"=>{"Platinum", 195.084},
+        "Pu\n"=>{"Plutonium", 244},
+        "Ra\n"=>{"Radium",	226},
+        "Rb\n"=>{"Rubidium", 85.4678},
+        "Re\n"=>{"Rhenium", 186.207},
+        "Rf\n"=>{"Rutherfordium", 267},
+        "Rg\n"=>{"Roentgenium", 280},
+        "Rh\n"=>{"Rhodium", 102.9055},
+        "Rn\n"=>{"Radon", 222},
+        "Ru\n"=>{"Ruthenium", 101.07},
+        "S\n"=>{"Sulfur", 32.065},
+        "Sb\n"=>{"Antimony", 121.76},
+        "Sc\n"=>{"Scandium", 44.955912},
+        "Se\n"=>{"Selenium", 78.96},
+        "Sg\n"=>{"Seaborgium",	271},
+        "Si\n"=>{"Silicon", 28.0855},
+        "Sm\n"=>{"Samarium", 150.36},
+        "Sn\n"=>{"Tin", 118.71},
+        "Sr\n"=>{"Strontium", 87.62},
+        "Ta\n"=>{"Tantalum", 180.94788},
+        "Tb\n"=>{"Terbium", 158.92535},
+        "Tc\n"=>{"Technetium",	98},
+        "Te\n"=>{"Tellurium", 127.6},
+        "Th\n"=>{"Thorium", 232.03806},
+        "Ti\n"=>{"Titanium", 47.867},
+        "Tl\n"=>{"Thallium", 204.3833},
+        "Tm\n"=>{"Thulium", 168.93421},
+        "Ts\n"=>{"Tennessine",	294},
+        "U\n"=>{"Uranium",	238.02891},
+        "V\n"=>{"Vanadium", 50.9415},
+        "W\n"=>{"Tungsten", 183.84},
+        "Xe\n"=>{"Xenon", 131.293},
+        "Y\n"=>{"Yttrium", 88.90585},
+        "Yb\n"=>{"Ytterbium", 173.054},
+        "Zn\n"=>{"Zinc", 65.38},
+        "Zr\n"=>{"Zirconium", 91.224}},
 %     return Peri_table 
-    return Peri_table.
+    Peri_table.
 
 % #Print the period table for the user to see by calling the make_periodic_table
 % table = make_periodic_table()
+display_element_in_table()->
+    Peri_table = make_periodic_table(),
+    Element = io:get_line("Please enter in your desired element from the periodic table "),
+    io:fwrite("~p~n", [maps:get(Element,Peri_table)]),
+    io:format("The element you selected with its respective atomic mass is:~p~n",[maps:get(Element,Peri_table)]).
+        % get("Ac",Peri_table)
+        % "Ag",Peri_table)
+        % "Al"
+        % "Am"
+        % "Ar"
+        % "As"
+        % "At"
+        % "Au"
+        % "B"
+        % "Ba"
+        % "Be"
+        % "Bh"
+        % "Bi"
+        % "Bk"
+        % "Br"
+        % "C"
+        % "Ca"
+        % "Cd"
+        % "Ce"
+        % "Cf"
+        % "Cl"
+        % "Cm"
+        % "Cn"
+        % "Co"
+        % "Cr"
+        % "Cs"
+        % "Cu"
+        % "Db"
+        % "Ds"
+        % "Dy"
+        % "Er"
+        % "Es"
+        % "Eu"
+        % "F"
+        % "Fe"
+        % "Fl"
+        % "Fm"
+        % "Fr"
+        % "Ga"
+        % "Gd"
+        % "Ge"
+        % "H"
+        % "He"
+        % "Hf"
+        % "Hg"
+        % "Ho"
+        % "Hs"
+        % "I"
+        % "In"
+        % "Ir"
+        % "K"
+        % "Kr"
+        % "La"
+        % "Li"
+        % "Lr"
+        % "Lu"
+        % "Lv"
+        % "Mc"
+        % "Md"
+        % "Mg"
+        % "Mn"
+        % "Mo"
+        % "Mt"
+        % "N"
+        % "Na"
+        % "Nb"
+        % "Nd"
+        % "Ne"
+        % "Nh"
+        % "Ni"
+        % "No"
+        % "Np"
+        % "O"
+        % "Og"
+        % "Os"
+        % "P"
+        % "Pa"
+        % "Pb"
+        % "Pd"
+        % "Pm"
+        % "Po"
+        % "Pr"
+        % "Pt"
+        % "Pu"
+        % "Ra"
+        % "Rb"
+        % "Re"
+        % "Rf"
+        % "Rg"
+        % "Rh"
+        % "Rn
+        % "Ru"
+        % "S"
+        % "Sb"
+        % "Sc"
+        % "Se"
+        % "Sg"
+        % "Si"
+        % "Sm"
+        % "Sn"
+        % "Sr"
+        % "Ta"
+        % "Tb"
+        % "Tc"
+        % "Te"
+        % "Th"
+        % "Ti"
+        % "Tl"
+        % "Tm"
+        % "Ts"
+        % "U"
+        % "V"
+        % "W"
+        % "Xe"
+        % "Y"
+        % "Yb"
+        % "Zn"
+        % "Zr"
 % for i in table:
+    % for(I of Table):
+        % write(I).
+% for(0,_) ->
+%    [];
+
+%    for (N, Term) when N> 0 ->
+%    io:fwrite(Table),
+%    [Term|for(N-1,Term)].
+
+% listComprhensionPeriTable() ->
+%     [I || I <- Peri_table].
 %         print(f"{i}")
 % #Define a global variable that calls a moleucle of choice from the user 
 % chem_form=input("Please enter a chemical fomula: ")
@@ -330,5 +465,10 @@ make_periodic_table() ->
 
 % if __name__ == "__main__":
 start()->
-    write("Here is the Periodic Table", Peri_table).
+    display_element_in_table().
+    % listComprhensionPeriTable().
+    % Moles_and_Molar()
+    % get_formula_name()
+    % Peri_table = make_periodic_table(),
+    % write("Here is the Periodic Table", Peri_table).
 %     main()
