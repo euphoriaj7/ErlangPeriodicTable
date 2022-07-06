@@ -1,4 +1,4 @@
--module(molarMassCalc).
+-module(PeriodicTable).
 % import functions needed here for the program to run 
 -compile([export_all]).
 
