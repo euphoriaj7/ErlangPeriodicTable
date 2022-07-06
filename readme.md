@@ -9,7 +9,7 @@ This is a simple erlang program to that will demonstrate just basic functionalit
 # Development Environment 
 - Visual Studio code 
 
-- Programming Language: Rust
+- Programming Language: Erlang
 # Key features
   -Holds all the elements of the periodic table in one big map
   
