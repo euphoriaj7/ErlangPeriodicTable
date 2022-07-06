@@ -6,7 +6,7 @@
 write(String, Value) ->
     io:format("~p = ~p~n", [String, Value]).
 
-% def make_periodic_table():
+% define make_periodic_table() function 
 make_periodic_table() ->
 %     # symobl: [name, atomic_mass]
 %     Peri_table = {
@@ -141,6 +141,11 @@ display_element_in_table()->
 if there is a second letter in the abbreviation): "),
     io:fwrite("~p~n", [maps:get(Element,Peri_table)]),
     io:format("The element you selected with its respective atomic mass is:~p~n",[maps:get(Element,Peri_table)]).
+
+
+
+% STRETCH GOALS!
+
         % get("Ac",Peri_table)
         % "Ag",Peri_table)
         % "Al"
@@ -463,6 +468,7 @@ if there is a second letter in the abbreviation): "),
 %     get_formula_name()
 
 % if __name__ == "__main__":
+
 start()->
     display_element_in_table().
     % listComprhensionPeriTable().
