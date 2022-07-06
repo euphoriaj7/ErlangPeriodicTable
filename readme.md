@@ -4,7 +4,7 @@
 This is a simple erlang program to that will demonstrate just basic functionality in the programming language of erlang in the form of lookup for elements in the periodic table. 
 
 # Demo Link
--
+-https://youtu.be/_IkhGVYl7zQ
 
 # Development Environment 
 - Visual Studio code 
