@@ -1,9 +1,6 @@
 -module(molarMassCalc).
 % import functions needed here for the program to run 
 -compile([export_all]).
-% -export([]).
-
-% from ast import parse
 
 % Create a method to print at will with given arguments
 write(String, Value) ->
